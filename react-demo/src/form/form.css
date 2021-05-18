@@ -1,0 +1,38 @@
+.form {
+  margin-top: 30px;
+}
+
+
+#methodButton {
+margin: 0 auto;
+}
+
+.formButton .square-radio{
+  display: inline block;
+  margin: 8px;
+  width: 100px;
+  background-color: #323221;
+  border-radius: 25px;
+  border: 2px solid #d0d0d0;
+  overflow: auto;
+}
+
+.methodButton label {
+  width:4.0em;
+}
+
+.methodButton label span {
+  text-align:center;
+  padding:3px 0px;
+  display:block;
+}
+
+.methodButton label input {
+  position:absolute;
+  top:-20px;
+}
+
+.methodButton input:checked + span {
+  background-color:gray;
+  color:#fff;
+}
