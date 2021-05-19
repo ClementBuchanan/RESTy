@@ -1,3 +1,28 @@
+# Lab 26 - Getting started with RESTy API
+
+RESTy Phase 1: Begin work on the RESTy API testing application
+
+## Author: Clement Buchanan
+
+### Link to GitHub repo [here](https://github.com/ClementBuchanan/RESTy)
+
+### Link to PR [here](https://github.com/ClementBuchanan/RESTy/pull/2)
+
+### Link to deployment site on Netlify [here](https://gallant-williams-a2d538.netlify.app/)
+
+## Resources
+
+## Collaborators
+
+- Kale Lesko
+
+## UML
+
+### Lab 26
+
+![image](../react-demo/assets/RESTy%20UML.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
