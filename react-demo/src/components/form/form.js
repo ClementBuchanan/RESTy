@@ -6,26 +6,32 @@ class Form extends React.Component {
     super()
     this.state = {
       url: '',
-      method: '',
+      method: ''
     }
   }
   onSend = async (event) => {
     event.preventDefault();
 
     await this.setState({
-      url: event.target.url.value,
+      urlInput: event.target.url.value,
       method: event.target.method.value,
     });
 
-    this.props.updateResults({ ...this.state });
+    // this.props.updateResults({ ...this.state });
   }
+
+  handleChangeInput = (e) => {
+    this.setState({ ...this.state, method: e.target.value })
+  }
+
 
   render() {
     return (
       <section className="form">
-        <form onSubmit={this.onSend}>
+        <form onSubmit={this.handleChangeInput}>
           <label>URL:</label>
-          <input id="urlInput" name="url" type='text' />
+          <input id="urlInput" name="url" type="text" onChange={this.handleChangeInput} />
+
           <button type="submit">GO!</button>
           <div id="formButton">
             <div className="methodButton">
@@ -51,6 +57,10 @@ class Form extends React.Component {
                 <input name="method" type="radio" value="DELETE" />
                 <span>DELETE</span>
               </label>
+            </div>
+            <div>
+              <textarea id="body" name="body">
+              </textarea>
             </div>
           </div>
         </form>

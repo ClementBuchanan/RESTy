@@ -1,0 +1,17 @@
+article {
+  background-color: #efefef;
+  border: #dddbdb 3px solid;
+  height: 400px;
+  width: 90%;
+  margin: auto;
+  color: black;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 25% 25%;
+  overflow: scroll;
+
+  ul li{
+    list-style: none;
+  }
+}
