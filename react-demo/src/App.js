@@ -1,7 +1,10 @@
 import React from 'react';
-import Footer from './footer/footer.js';
-import './footer/footer.css';
-import Form from './form/form.js';
+import Footer from './components/footer/footer.js';
+import './components/footer/footer.css';
+import Form from './components/form/form.js';
+// import Results from './components/results/results.js';
+
+import './App.css';
 
 class Header extends React.Component {
   render() {
@@ -12,14 +15,6 @@ class Header extends React.Component {
 
 }
 
-// class Form extends React.Component {
-//   render() {
-//     return (
-//       <Form />
-//     );
-//   }
-
-// }
 
 class App extends React.Component {
 
@@ -30,47 +25,40 @@ class App extends React.Component {
       method: [],
       body: [],
       header: {},
-      history: [],
-      count: 0,
-      homeTeam: "The score is now",
-      visitingTeam: "to",
-      home: 0,
-      visitors: 0
+      clicks: 0,
+      words: "The score is now 32",
+      formValues: {}
     }
   }
 
-  handleHomeIncrement = () => {
-    let home = this.state.home + 1;
-    this.setState({ home });
-  }
-
-  handleVisitorsIncrement = () => {
-    let visitors = this.state.visitors + 1;
-    this.setState({ visitors });
+  handleClickIncrement = () => {
+    let clicks = this.state.clicks + 1;
+    this.setState({ clicks });
   }
 
   handleChangeInput = (e) => {
-    // let words = e.target.value;
-    this.setState({ ...this.state, words: e.target.value });
+    this.setState({ ...this.state, words: e.target.value })
+  }
+
+  handleOnSubmit = (e) => {
+    e.preventDefault();
+    this.setState({ ...this.state, words: this.state.words })
   }
 
   render() {
     return (
       <>
         <Header />
-        <Form />
+        <h1>{this.state.words}</h1>
+
+        < button onClick={this.handleChangeInput}>Go!</button>
         <div>
-          <div>
-            {this.state.words}
-          </div>
-          {this.state.homeTeam} {this.state.home}
-          <button onClick={this.handleHomeIncrement}>+</button>
-          <div>
-            <input type="text" onChange={this.handleChangeInput} />
-          </div>
-          {this.state.visitingTeam} {this.state.visitors}
-          <button onClick={this.handleVisitorsIncrement}>+</button>
+          <Form onSubmit={this.handleChangeInput} />
+          <input type="text" onChange={this.handleChangeInput} />
         </div>
+        {/* { { this.state.clicks } */}
+
+
         <Footer />
       </>
     );
