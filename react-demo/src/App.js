@@ -1,9 +1,11 @@
+
 import React from 'react';
 import Footer from './components/footer/footer.js';
 import './components/footer/footer.css';
 import Form from './components/form/form.js';
-// import Results from './components/results/results.js';
+import Results from './components/results/results.js';
 
+import axios from 'axios';
 import './App.css';
 
 class Header extends React.Component {
@@ -27,8 +29,22 @@ class App extends React.Component {
       header: {},
       clicks: 0,
       words: "The score is now 32",
-      formValues: {}
+      formValues: {},
+      results: [
+        { text: "Do something nice for McKesia" },
+        { text: "Send her flowers" }
+      ]
     }
+  }
+
+  fetchData = async (options) => {
+    const response = await axios({
+      method: options.method || "get",
+      url: options.url,
+      data: options.body && JSON.parse(options.body)
+    });
+    const results = response.data.results;
+    this.setState({ results });
   }
 
   handleClickIncrement = () => {
@@ -50,15 +66,12 @@ class App extends React.Component {
       <>
         <Header />
         <h1>{this.state.words}</h1>
-
-        < button onClick={this.handleChangeInput}>Go!</button>
+        <Form handler={this.fetchData} />
+        < button onClick={this.fetchData}>Go!</button>
         <div>
-          <Form onSubmit={this.handleChangeInput} />
           <input type="text" onChange={this.handleChangeInput} />
         </div>
-        {/* { { this.state.clicks } */}
-
-
+        <Results list={this.state.results} />
         <Footer />
       </>
     );
