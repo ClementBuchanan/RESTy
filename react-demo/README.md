@@ -1,4 +1,5 @@
 # Lab 26 - Getting started with RESTy API
+# Lab 26 - Props and State
 
 RESTy Phase 1: Begin work on the RESTy API testing application
 
@@ -14,11 +15,9 @@ RESTy Phase 1: Begin work on the RESTy API testing application
 
 ## Collaborators
 
-- Kale Lesko
+- Kale Lesko (lab 26)
 
-## UML
-
-### Lab 26
+## UML Lab 26 and 27
 
 ![image](../react-demo/assets/RESTy%20UML.png)
 
