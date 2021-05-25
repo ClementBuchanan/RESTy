@@ -1,4 +1,4 @@
-article {
+.App-results {
   background-color: #efefef;
   border: #dddbdb 3px solid;
   height: 400px;
@@ -10,8 +10,7 @@ article {
   display: grid;
   grid-template-columns: 25% 25%;
   overflow: scroll;
-
-  ul li{
-    list-style: none;
-  }
+}
+.ul li{
+  list-style: none;
 }
