@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css';
-import { NavLink } from 'react-router-dom';
+
 
 //add menu bar to header
 //Link to "Home" - links to / and shows the search form and results page
@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
-    <header className="header">
+    <header className="App-header">
       <h2>RESTy</h2>
     </header>
   )
