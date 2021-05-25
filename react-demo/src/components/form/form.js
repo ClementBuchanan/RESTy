@@ -29,8 +29,6 @@ class Form extends React.Component {
     this.setState({ ...this.state, [name]: value })
   }
 
-
-
   render() {
     return (
       <section className="form">
