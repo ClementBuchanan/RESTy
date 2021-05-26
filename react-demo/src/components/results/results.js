@@ -1,7 +1,6 @@
 
 import React from 'react';
 import './results.css';
-
 import JSONPretty from 'react-json-pretty';
 
 
@@ -40,15 +39,16 @@ export default Results;
 //   )
 // }
 
-  //     <ul>
-  //       <li>Count</li>
-  //       <li><JSONPretty id="json-pretty" data={props.data.count}></JSONPretty></li>
-  //       <li>Headers</li>
-  //       <li><JSONPretty id="json-pretty" data={props.data.headers}></JSONPretty></li>
-  //       <li>Results</li>
-  //       <li><JSONPretty id="json-pretty" data={props.data.body}></JSONPretty></li>
-  //     </ul> */}
-  //   
+// <ul>
+//   <li>Count</li>
+//   <li><JSONPretty id="json-pretty" data={props.data.count}></JSONPretty></li>
+//   <li>Headers</li>
+//   <li><JSONPretty id="json-pretty" data={props.data.headers}></JSONPretty></li>
+//   <li>Results</li>
+//   <li><JSONPretty id="json-pretty" data={props.data.body}></JSONPretty></li>
+// </ul> * /}
+
+
 
 
 // class Results extends React.Component {

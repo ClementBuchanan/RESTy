@@ -7,28 +7,16 @@ class Form extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      // urls: [],
-      // Methods: [],
       methodValue: 'get',
       classValue: 'getButton',
       input: '',
       requestInput: '',
-      // methodClass: [],
       Get: 'getButton',
       Post: 'plain',
       Put: 'plain',
       Delete: 'plain',
     }
   }
-
-  //adding url and methods
-  // addUrlAndMethods = () => {
-  //   this.setState({
-  //     urls: [this.state.input, ...this.state.Url],
-  //     methods: [this.state.methidValue, ...this.state.Method],
-  //     methodClass: [this.state.classValue, ...this.state.methodClass],
-  //   });
-  // };
 
   handleMethodChange = (e) => {
     console.log(e.target.value);
@@ -38,8 +26,6 @@ class Form extends React.Component {
   methodChange = (e) => {
     e.preventDefault();
     console.log(e.target.value);
-    // this.setState({ methodValue: e.target.value });
-    // this.setState({ classValue: `${e.target.value}Button` });
     if (e.target.value === 'get') {
       this.setState({
         Get: 'getButton',
@@ -88,11 +74,6 @@ class Form extends React.Component {
     this.setState({ requestInput: e.target.value });
   }
 
-  // methodChange = (e) => {
-  //   e.preventDefault();
-  //   this.setState({ methodValue: e.target.value });
-  // }
-
   handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -111,8 +92,6 @@ class Form extends React.Component {
     this.setState({ input: '' });
   }
 
-
-
   render() {
     return (
       <div>
@@ -126,9 +105,11 @@ class Form extends React.Component {
             <button className={this.state.Post} value="post" onClick={this.methodChange}>POST</button>
             <button className={this.state.Put} value="put" onClick={this.methodChange}>PUT</button>
             <button className={this.state.Delete} value="delete" onClick={this.methodChange}>DELETE</button>
-            <label>Request Body: <br />
-              <textarea className="textarea" value={this.state.requestInput} onChange={this.handleRequestChange} />
-            </label>
+            <div>
+              <label>Request Body: <br />
+                <textarea className="textarea" value={this.state.requestInput} onChange={this.handleRequestChange} />
+              </label>
+            </div>
             <input className="submit" type="submit" value="submit" onClick={this.addUrlAndMethod} />
           </label>
         </form>
