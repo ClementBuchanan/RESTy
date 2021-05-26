@@ -11,6 +11,23 @@
   grid-template-columns: 25% 25%;
   overflow: scroll;
 }
-.ul li{
-  list-style: none;
+
+.results-title {
+  position: fixed;
+  background-color: #ddd;
+  padding: 2px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+.json-pretty {
+  font-size: 10px;
+}
+
+.response-headers {
+  padding-top: 18px;
 }
