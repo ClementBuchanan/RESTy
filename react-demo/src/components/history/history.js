@@ -2,9 +2,9 @@
 import React from 'react';
 
 import './history.css';
+import './history.js';
 
 export default function History(props) {
-  // console.log(props);
   return (
     <div className="history">
       <ul>
